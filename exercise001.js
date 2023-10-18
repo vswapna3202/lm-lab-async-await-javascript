@@ -1,6 +1,7 @@
 const promise = new Promise((resolve, reject) => {
-	// Generate random number between 0 and 9
+	// Generate random number between 0 and 9	
 	const randomInt = Math.floor(Math.random() * 10);
+	console.log(`Random Integer is: ${randomInt}`);
 
 	if (randomInt % 2 === 0) {
 		// Success
@@ -12,3 +13,6 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Your solution(s) to exercise001 here!
+promise
+.then(response => console.log(`Yay! Promise resolved with response: ${response}`))
+.catch(reason => console.log(`Boo. Promise rejected with response: ${reason}`));
