@@ -13,7 +13,7 @@ const fetchData = async(apiEndPoint) => {
   try{
     const response = await fetch(apiEndPoint);
     const json = await response.json();
-    console.log(`Response: `,response);    
+ 
     console.log(`JSON: `,json);
   }catch(error){
     console.log(`Error: ${error}`);
